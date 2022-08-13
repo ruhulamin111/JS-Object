@@ -54,4 +54,32 @@ Object.freeze(details);
 details.areacode = 1212;
 delete details.areacode;
 
-console.log(details);
+// for of or in object 
+const about = {
+    name: 'Abu Bakar ciddik',
+    age: 20,
+    location: {
+        village: 'sukhnagar',
+        zilla: 'shantinagar',
+        country: {
+            continent: 'asia',
+            area: 150000
+        }
+
+    }
+}
+for (const prop in about) {
+    // console.log(prop);
+}
+const property = Object.keys(about);
+for (const prop of property) {
+    // console.log(prop);
+}
+const pairs = Object.entries(about);
+for (const prop of pairs) {
+    // console.log(prop)
+}
+for (const [key, values] of Object.entries(about)) {
+    // console.log(key, values)
+}
+

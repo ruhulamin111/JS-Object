@@ -30,5 +30,20 @@ const info = {
 
     }
 }
-console.log(info.location.country.continent);
+
+// object property method 
+const details = {
+    designation: 'Jr developer',
+    skills: {
+        javascript: 'midlevel',
+        react: 'mid level',
+        nodejs: 'mid level'
+    },
+    experience: 2,
+    office: 'Dhaka',
+    areacode: 1216
+}
+
+const keys = Object.keys(details);
+console.log(keys);
 

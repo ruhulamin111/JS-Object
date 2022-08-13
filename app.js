@@ -83,3 +83,19 @@ for (const [key, values] of Object.entries(about)) {
     // console.log(key, values)
 }
 
+// compare object and object work by reference 
+const object1 = { a: 1, b: 2, c: 3, d: 4 };
+const object2 = { a: 1, b: 2, c: 3 };
+function compareObject(object1, object2) {
+    if (Object.keys(object1).length !== Object.keys(object2).length) {
+        return false;
+    }
+    for (const prop in object1) {
+        if (object1[prop] !== object2[prop]) {
+            return false
+        }
+    }
+    return true;
+}
+const result = compareObject(object1, object2);
+console.log(result);

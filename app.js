@@ -15,4 +15,20 @@ class Profile {
     }
 }
 const profile = new Profile('Rafee', 15);
-console.log(profile);
+
+// 3. nested object 
+const info = {
+    name: 'Abu Bakar ciddik',
+    age: 20,
+    location: {
+        village: 'sukhnagar',
+        zilla: 'shantinagar',
+        country: {
+            continent: 'asia',
+            area: 150000
+        }
+
+    }
+}
+console.log(info.location.country.continent);
+

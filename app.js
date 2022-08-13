@@ -98,4 +98,28 @@ function compareObject(object1, object2) {
     return true;
 }
 const result = compareObject(object1, object2);
-console.log(result);
+
+// funtion call from another array 
+const student1 = {
+    id: 10021,
+    name: 'Rafee',
+    age: 15,
+    salary: 1500,
+    roll: 23,
+    doPayment: function (payment) {
+        this.salary = this.salary - payment;
+        return this.salary;
+    }
+}
+const student2 = {
+    id: 10021,
+    name: 'Rafee',
+    age: 15,
+    salary: 1700,
+    roll: 23,
+}
+const may = student1.doPayment(300);
+const june = student1.doPayment.bind(student2);
+const junePay = june(700);
+
+

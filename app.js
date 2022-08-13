@@ -48,5 +48,10 @@ const keys = Object.keys(details);
 const value = Object.values(details);
 const entries = Object.entries(details);
 
+Object.seal(details);
+details.office = 'Gulsan';
+Object.freeze(details);
+details.areacode = 1212;
+delete details.areacode;
 
-console.log(entries);
+console.log(details);

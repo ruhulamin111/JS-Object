@@ -121,5 +121,8 @@ const student2 = {
 const may = student1.doPayment(300);
 const june = student1.doPayment.bind(student2);
 const junePay = june(700);
+const julyPay = student1.doPayment.apply(student2, [120]);
+const agustPay = student1.doPayment.call(student2, 320);
 
+console.log(agustPay);
 

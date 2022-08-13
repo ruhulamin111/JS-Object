@@ -45,5 +45,8 @@ const details = {
 }
 
 const keys = Object.keys(details);
-console.log(keys);
+const value = Object.values(details);
+const entries = Object.entries(details);
 
+
+console.log(entries);
